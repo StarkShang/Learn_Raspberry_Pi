@@ -13,8 +13,13 @@ enum GPIOMODE {
 };
 
 
-void gpioFunctionSelect(int, enum GPIOMODE);
+void gpioFuncSelect(int, enum GPIOMODE);
 void gpioSetHigh(int);
 void gpioSetLow(int);
+extern void gpioPullDisable();
+extern void gpioPullDownEnable();
+extern void gpioPullUpEnable();
+extern void gpioPullClockEnable(int);
+extern void gpioPullClockDisable(int);
 
 #endif
