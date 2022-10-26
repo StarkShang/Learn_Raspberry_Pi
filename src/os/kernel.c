@@ -7,6 +7,6 @@ void main() {
     uartSendString("Hello World!\n");
     // echo everything back
     while(1) {
-        uartSend(uartGetChar());
+        uartSendChar(uartGetChar());
     }
 }

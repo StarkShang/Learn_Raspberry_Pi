@@ -2,7 +2,7 @@
 #define _UART_H_
 
 void uartInit();
-void uartSend(unsigned int);
+void uartSendChar(unsigned char);
 char uartGetChar();
 void uartSendString(char*);
 
