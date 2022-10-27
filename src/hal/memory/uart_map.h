@@ -1,10 +1,10 @@
-#ifndef _GPIO_MAP_H_
-#define _GPIO_MAP_H_
+#ifndef _UART_MAP_H_
+#define _UART_MAP_H_
 
 #include "memory_map.h"
 
 #define AUX_IRQ         ((volatile unsigned int*)(MMIO_BASE+0x00215000))
-#define AUX_ENABLE      ((volatile struct AUX_ENABLE_REG*)(MMIO_BASE+0x00215004))
+#define AUX_ENABLE      ((volatile AUX_ENABLE_REG*)(MMIO_BASE+0x00215004))
 #define AUX_MU_IO       ((volatile unsigned int*)(MMIO_BASE+0x00215040))
 #define AUX_MU_IER      ((volatile unsigned int*)(MMIO_BASE+0x00215044))
 #define AUX_MU_IIR      ((volatile unsigned int*)(MMIO_BASE+0x00215048))
@@ -13,17 +13,17 @@
 #define AUX_MU_LSR      ((volatile unsigned int*)(MMIO_BASE+0x00215054))
 #define AUX_MU_MSR      ((volatile unsigned int*)(MMIO_BASE+0x00215058))
 #define AUX_MU_SCRATCH  ((volatile unsigned int*)(MMIO_BASE+0x0021505C))
-#define AUX_MU_CNTL     ((volatile struct AUX_MU_CNTL_REG*)(MMIO_BASE+0x00215060))
+#define AUX_MU_CNTL     ((volatile AUX_MU_CNTL_REG*)(MMIO_BASE+0x00215060))
 #define AUX_MU_STAT     ((volatile unsigned int*)(MMIO_BASE+0x00215064))
 #define AUX_MU_BAUD     ((volatile unsigned int*)(MMIO_BASE+0x00215068))
 
-struct AUX_ENABLE_REG {
+typedef struct {
     char MiniUART: 1;
     char SPI1: 1;
     char SPI2: 1;
-};
+} AUX_ENABLE_REG;
 
-struct AUX_MU_CNTL_REG {
+typedef struct {
     /*
      * If this bit is set the mini UART receiver is enabled.
      * If this bit is clear the mini UART receiver is disabled.
@@ -65,7 +65,7 @@ struct AUX_MU_CNTL_REG {
      * If clear the CTS auto flow assert level is high.
      */
     char CtsAssertLevel: 1;
-};
+} AUX_MU_CNTL_REG;
 
 
 #endif

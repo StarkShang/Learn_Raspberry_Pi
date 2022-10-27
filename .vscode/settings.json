@@ -1,0 +1,31 @@
+{
+    "cSpell.words": [
+        "BERR",
+        "CLRF",
+        "CMGP",
+        "CMPWM",
+        "CMPWMCTL",
+        "CMPWMDIV",
+        "DIVF",
+        "DIVI",
+        "DMAC",
+        "EMPT",
+        "fsel",
+        "GAPO",
+        "GPCLR",
+        "GPFSEL",
+        "gpio",
+        "GPIOMODE",
+        "GPPUD",
+        "GPPUDCLK",
+        "GPSET",
+        "MMIO",
+        "MSEN",
+        "PWEN",
+        "RERR",
+        "RPTL",
+        "SBIT",
+        "USEF",
+        "WERR"
+    ]
+}
